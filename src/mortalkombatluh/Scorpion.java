@@ -8,7 +8,7 @@ package mortalkombatluh;
  *
  * @author Familia Bookafé
  */
-public class Reptile {
+public class Scorpion {
 
     private String socoforte;
     private String socofraco;
@@ -86,7 +86,7 @@ public class Reptile {
         this.especial = especial;
     }
 
-    public Reptile ()
+    public Scorpion ()
     {
         this.agarra= null;
         this.chuteforte = null;
@@ -135,3 +135,15 @@ public class Reptile {
         return bolarapida() + chuteforte ;
     }
 }
+/*Scorpion
+Spear: Trás - Trás - Quadrado
+Demon Fire: Baixo - Trás - Triângulo
+Teleport: Baixo - Trás - [X]
+Take Down: Baixo - Trás - Bolinha
+Air Throw: Defesa (no ar)
+X-Ray Move Scorpion Sting: L2 + R2
+Fatality 1 > Split Decision: Frente - Baixo - Frente - Triângulo (encostado)
+Fatality 2 > Nether-Gate: Trás - Frente - Trás - [X] (encostado)
+Fatality 3 > Toasty: Baixo - Cima - Cima - Triângulo (a um pulo) *Scorpion versão MK1
+Stage Fatality: Frente - Cima - Cima - Quadrado
+Babality: Baixo - Trás - Frente - Baixo - Triângulo (a um pulo)*/

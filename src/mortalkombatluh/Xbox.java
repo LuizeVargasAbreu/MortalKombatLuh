@@ -14,7 +14,7 @@ public class Xbox {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Reptile person1 = new Reptile();
+        Reptile p1 = new Reptile();
         /*Reptile
          Slow Force Ball: Trás - Trás - Quadrado
          Fast Force Ball: Trás - Trás - [X]
@@ -29,32 +29,34 @@ public class Xbox {
          Fatality 3 > Yummy!: Trás - Trás - Frente - Baixo - Defesa (a um pulo) *Reptile versão MK1
          Stage Fatality: Frente - Baixo - Baixo - Defesa
          Babality: Trás - Frente - Trás - Baixo - [X] (a um pulo)*/
-        person1.setSocoforte("Bolinha");
-        person1.setSocofraco("Triângulo");
-        person1.setChuteforte("X");
-        person1.setChutefraco("Quadrado");
-        person1.setDefesa("R1");
-        person1.setAgarra("L1");
-        person1.setEspecial("R2");
+        p1.setSocoforte("B");
+        p1.setSocofraco("A");
+        p1.setChuteforte("Y");
+        p1.setChutefraco("X");
+        p1.setDefesa("R1");
+        p1.setAgarra("L1");
+        p1.setEspecial("RT");
         
         System.out.println("          XBOX           ");
         System.out.println("**********Configuração dos Botões***********");
-        System.out.println("Soco Forte:" + person1.getSocoforte());
-        System.out.println("Soco Fraco:" + person1.getSocofraco());
-        System.out.println("Chute Forte:" + person1.getChuteforte());
-        System.out.println("Chute Fraco:" + person1.getChutefraco());
-        System.out.println("Defesa:" + person1.getDefesa());
-        System.out.println("Agarra:" + person1.getAgarra());
-        System.out.println("Especial:" + person1.getEspecial());
+        System.out.println("Soco Forte:" + p1.getSocoforte());
+        System.out.println("Soco Fraco:" + p1.getSocofraco());
+        System.out.println("Chute Forte:" + p1.getChuteforte());
+        System.out.println("Chute Fraco:" + p1.getChutefraco());
+        System.out.println("Defesa:" + p1.getDefesa());
+        System.out.println("Agarra:" + p1.getAgarra());
+        System.out.println("Especial:" + p1.getEspecial());
 
-        System.out.println("**********Comandos Especiais***********");
-        System.out.println("Invísivel: " + person1.invisivel());
-        System.out.println("Ácido: " + person1.acido());
-        System.out.println("Bola Rápida: "+ person1.bolarapida() );
-        System.out.println("Bola Lenta: "+ person1.bolalenta());
-        System.out.println("Defesa:" );
-        System.out.println("Agarra:" );
-        System.out.println("Especial:");
+        System.out.println("\n**********Comandos Especiais***********");
+        System.out.println("Invísivel: " + p1.invisivel());
+        System.out.println("Ácido: " + p1.acido());
+        System.out.println("Bola Rápida: "+ p1.bolarapida() );
+        System.out.println("Bola Lenta: "+ p1.bolalenta());
+        System.out.println("Combo 1: "+ p1.combo1());
+        System.out.println("Combo 2: "+ p1.combo2());
+        System.out.println("Fatality 1: "+ p1.fatality1());
+        System.out.println("Fatality 2: "+ p1.fatality2());
+
 
     }
 }
