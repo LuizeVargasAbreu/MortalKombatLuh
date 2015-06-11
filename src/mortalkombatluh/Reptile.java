@@ -1,13 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package mortalkombatluh;
 
-/**
- *
- * @author Familia Bookafé
- */
 public class Reptile {
 
     private String socoforte;
@@ -124,11 +116,11 @@ public class Reptile {
     }
     public String fatality1 ()
     {
-        return "Frente - Frente - Baixo - Cima - " + chuteforte + " (a um passo)";
+        return "Frente - Frente - Baixo - Cima - " + chuteforte;
     }
     public String fatality2 ()
     {
-        return "Baixo - Baixo - Frente - Trás - " + chutefraco + "(a um passo)";
+        return "Baixo - Baixo - Frente - Trás - " + chutefraco;
     }
     private String bolaultrasonica ()
     {

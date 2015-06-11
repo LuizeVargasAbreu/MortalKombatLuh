@@ -1,43 +1,42 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package mortalkombatluh;
 
-/**
- *
- * @author Familia Bookafé
- */
 public class Xbox {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Reptile p1 = new Reptile();
-        /*Reptile
-         Slow Force Ball: Trás - Trás - Quadrado
-         Fast Force Ball: Trás - Trás - [X]
-         Slide: Trás - Frente - Bolinha
-         Acid Hand: Baixo - Trás - Triângulo
-         Invisibility: Baixo - Cima - Bolinha
-         Acid Spit: Baixo - Frente - Quadrado
-         Elbow Dash: Trás - Frente - Triângulo
-         X-Ray Move Tricky Lizard: L2 + R2
-         Fatality 1 > Acid Yak: Frente - Frente - Baixo - Cima - [X] (a um passo)
-         Fatality 2 > Weight Loss: Baixo - Baixo - Frente - Trás - Quadrado (a um passo)
-         Fatality 3 > Yummy!: Trás - Trás - Frente - Baixo - Defesa (a um pulo) *Reptile versão MK1
-         Stage Fatality: Frente - Baixo - Baixo - Defesa
-         Babality: Trás - Frente - Trás - Baixo - [X] (a um pulo)*/
+        
         p1.setSocoforte("B");
-        p1.setSocofraco("A");
-        p1.setChuteforte("Y");
+        p1.setSocofraco("Y");
+        p1.setChuteforte("A");
         p1.setChutefraco("X");
         p1.setDefesa("R1");
         p1.setAgarra("L1");
         p1.setEspecial("RT");
         
-        System.out.println("          XBOX           ");
+        Scorpion p2 = new Scorpion();
+
+        p2.setSocoforte("B");
+        p2.setSocofraco("Y");
+        p2.setChuteforte("A");
+        p2.setChutefraco("X");
+        p2.setDefesa("R1");
+        p2.setAgarra("L1");
+        p2.setEspecial("RT");
+        
+        SubZero p3 = new SubZero();
+
+        p3.setSocoforte("B");
+        p3.setSocofraco("Y");
+        p3.setChuteforte("A");
+        p3.setChutefraco("X");
+        p3.setDefesa("R1");
+        p3.setAgarra("L1");
+        p3.setEspecial("RT");
+        
+        // Configurações dos botões do XBOX
+        
+        System.out.println("              XBOX           ");
         System.out.println("**********Configuração dos Botões***********");
         System.out.println("Soco Forte:" + p1.getSocoforte());
         System.out.println("Soco Fraco:" + p1.getSocofraco());
@@ -47,7 +46,9 @@ public class Xbox {
         System.out.println("Agarra:" + p1.getAgarra());
         System.out.println("Especial:" + p1.getEspecial());
 
-        System.out.println("\n**********Comandos Especiais***********");
+        // Comandos Especias de cada personagem
+        
+        System.out.println("\n**********Comandos Especiais - REPTILE ***********");
         System.out.println("Invísivel: " + p1.invisivel());
         System.out.println("Ácido: " + p1.acido());
         System.out.println("Bola Rápida: "+ p1.bolarapida() );
@@ -56,7 +57,46 @@ public class Xbox {
         System.out.println("Combo 2: "+ p1.combo2());
         System.out.println("Fatality 1: "+ p1.fatality1());
         System.out.println("Fatality 2: "+ p1.fatality2());
-
+        
+        System.out.println("\n**********Comandos Especiais - SCORPION ***********");
+        System.out.println("Spear: " + p2.spear());
+        System.out.println("Teleport: " + p2.teleport());
+        System.out.println("Take Down: " + p2.takedown());
+        System.out.println("Combo 1: " + p2.combo1());
+        System.out.println("Combo 2: " + p2.combo2());
+        System.out.println("Fatality 1: " + p2.fatality1());
+        System.out.println("Fatality 2: " + p2.fatality2());
+        
+        System.out.println("\n**********Comandos Especiais - SUB ZERO ***********");
+        System.out.println("Spear: " + p3.gelochao());
+        System.out.println("Teleport: " + p3.gelofrente());
+        System.out.println("Slide: " + p3.slide());
+        System.out.println("Combo 1: " + p3.combo1());
+        System.out.println("Combo 2: " + p3.combo2());
+        System.out.println("Fatality 1: " + p3.fatality1());
+        System.out.println("Fatality 2: " + p3.fatality2());
+        
+        // Luta entre o Reptile e o Scorpion
+        LutaReptileScorpion lutars = new LutaReptileScorpion();
+          
+        lutars.setCenario("Inferno");
+        lutars.setPersonagem1(p1); // Reptile
+        lutars.setPersonagem2(p2); // Scorpion
+        
+        lutars.acertaGolpe("p1");
+        System.out.println("Personagem 1 - Acertou golpe");
+        System.out.println("Personagem 1: " + lutars.getPersonagem1().getVida() +
+                "\nPersoangem 2: " + lutars.getPersonagem2().getVida() +"\n");
+        lutars.acertaCombo("p1");
+        System.out.println("Personagem 1 - Acertou combo");
+        System.out.println("Personagem 1: " + lutars.getPersonagem1().getVida() +
+                "\nPersoangem 2: " + lutars.getPersonagem2().getVida() +"\n");
+        
+         lutars.acertaGolpe("p2");
+        System.out.println("Personagem 2 - Acertou golpe");
+        System.out.println("Personagem 2: " + lutars.getPersonagem1().getVida() +
+                "\nPersoangem 1: " + lutars.getPersonagem2().getVida() +"\n");
+        
 
     }
 }
